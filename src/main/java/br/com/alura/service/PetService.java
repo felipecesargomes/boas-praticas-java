@@ -1,5 +1,6 @@
 package br.com.alura.service;
 
+import br.com.alura.client.ClientHttpConfiguration;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -16,13 +17,19 @@ import java.util.Scanner;
 
 public class PetService {
 
+    private ClientHttpConfiguration client;
+
+    public PetService(ClientHttpConfiguration client) {
+        this.client = client;
+    }
+
     public void listarPetsDoAbrigo() throws IOException, InterruptedException {
         System.out.println("Digite o id ou nome do abrigo:");
         String idOuNome = new Scanner(System.in).nextLine();
 
         String uri = "http://localhost:8080/abrigos/" +idOuNome +"/pets";
 
-        HttpResponse<String> response = dispararRequisicaoGet(uri);
+        HttpResponse<String> response = client.dispararRequisicaoGet(uri);
 
         int statusCode = response.statusCode();
         if (statusCode == 404 || statusCode == 500) {
@@ -74,7 +81,7 @@ public class PetService {
             json.addProperty("peso", peso);
 
             String uri = "http://localhost:8080/abrigos/" + idOuNome + "/pets";
-            HttpResponse<String> response = dispararRequisicaoPost(uri, json);
+            HttpResponse<String> response = client.dispararRequisicaoPost(uri, json);
             int statusCode = response.statusCode();
             String responseBody = response.body();
             if (statusCode == 200) {
