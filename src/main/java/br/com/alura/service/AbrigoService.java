@@ -41,8 +41,8 @@ public class AbrigoService {
         for (Abrigo abrigo : abrigoList) {
             long id = abrigo.getId();
             String nome = abrigo.getNome();
-            String nome = jsonObject.get("nome").getAsString();
-            System.out.println(id +" - " +nome);
+            String telefone = abrigo.getTelefone();
+            System.out.println(id +" - " +nome + " - ");
         }
     }
 

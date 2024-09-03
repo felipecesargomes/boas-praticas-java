@@ -2,6 +2,10 @@ package br.com.alura.domain;
 
 public class Pet {
 
+    public Pet() {
+        // Construtor padrão necessário para deserialização
+    }
+
     public Pet(String tipo, String nome, String raca, int idade, String cor, Float peso) {
         this.tipo = tipo;
         this.nome = nome;
@@ -11,6 +15,7 @@ public class Pet {
         this.peso = peso;
     }
 
+    private long id;
     private String tipo;
     private String nome;
     private String raca;
@@ -18,6 +23,31 @@ public class Pet {
     private String cor;
     private Float peso;
 
+    public long getId() {
+        return id;
+    }
 
+    public String getTipo() {
+        return tipo;
+    }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getRaca() {
+        return raca;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public Float getPeso() {
+        return peso;
+    }
 }
