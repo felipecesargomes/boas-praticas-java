@@ -5,3 +5,7 @@ Este curso, oferecido pela Alura, abordou técnicas avançadas para aprimorar c�
 Além disso, o curso abordou a criação de domínios ricos, a implementação de testes automatizados para assegurar a qualidade do código, e a aplicação de padrões de projetos para resolver problemas recorrentes de maneira eficiente e escalável.
 
 ![image](https://github.com/user-attachments/assets/a874e7b1-aaf1-4c8d-a054-146cb9b425f8)
+
+
+<b>OBS</b>: Para executar a aplicação main você precisa rodar o api.jar antes indo até a pasta onde se encontra o arquivo jar e executar:
+<b>java -jar api.jar</b>
