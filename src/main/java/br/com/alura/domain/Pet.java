@@ -50,4 +50,8 @@ public class Pet {
     public Float getPeso() {
         return peso;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }

@@ -38,4 +38,7 @@ public class Abrigo {
         return email;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
